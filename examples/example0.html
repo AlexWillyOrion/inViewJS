@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inView - Example0</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-inView.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if($('#example').inView()) /* SIMPLE CONTROL */
+				{
+					$('#example').addClass('visible');
+				}
+				else
+				{
+					$('#example').removeClass('visible');
+				}
+			});
+			
+		});
+	</script>
+	<style type="text/css">
+		
+		/* EXAMPLE CSS */
+		
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+		*,html,body{
+			margin:0;
+			padding:0;
+			font-family: 'Open Sans', sans-serif;
+			text-align: center;
+			font-weight: 400;
+		}
+		h1{
+			margin-top: 50px;
+		}
+		h3{
+			font-weight: 300;
+			margin-top: 30px;
+		}
+		.content{
+			height: 150vh;
+			width: 100vw;
+		}
+		
+		#example{
+			transition: all 1s;
+			height: 30vh;
+			width: 100vw;
+			background: #ca0000;
+		}
+		#example.visible{
+			background: #00ca0e;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>inView jQuery Plugin</h1>
+		<h3>A jQuery Plugin for detect if a element is in Browser View</h3>
+		<h3>scroll to test</h3>
+	</div>
+	<div id="example"></div>
+	<div class="content"></div>
+</body>
+</html>
