@@ -26,7 +26,7 @@ Descrizione: Plugin jQuery che permette di vedere se un elemento è visibile nel
         if(settings.onlyTop == true)
         	return (((s_t + w_h) >= (t + h) && s_t <= t) ? true : false);
         else
-			return (((s_t + w_h) >= (t + h) && s_t <= t && (s_l + w_w) >= (l+w) && s_l <= l) ? true : false);
+		return (((s_t + w_h) >= (t + h) && s_t <= t && (s_l + w_w) >= (l+w) && s_l <= l) ? true : false);
 
 
 	};
